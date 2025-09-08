@@ -1,0 +1,12 @@
+services:
+  cs16-basic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cs16-basic
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "27016:27015/udp"
+      - "27016:27015/tcp"
